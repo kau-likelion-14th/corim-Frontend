@@ -1,9 +1,11 @@
 import "../styles/Header.css";
 import logo from"../assets/img/logo.png";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import LogOutIcon from"../assets/icon/logout.png";
 
 function Header(){
+    const navigate = useNavigate();
+
     return (
         <header className="header">
             {/*로고*/}
@@ -30,7 +32,7 @@ function Header(){
             {/*사용자 정보*/}
             <div className="header-right">
                 <span className="user-name">백다혜님</span>
-                <img src={LogOutIcon} alt="로그아웃" className="header-icon"/>
+                <img src={LogOutIcon} alt="로그아웃" className="header-icon" onClick={() => navigate("/login")}/>
             </div>
         </header>
     );
