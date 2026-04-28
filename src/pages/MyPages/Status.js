@@ -1,0 +1,22 @@
+import React from 'react';
+import StatCard from './StatCard';
+
+function Status() {
+    const stats = [
+        { icon: "🔥", title: "연속 달성일", statistics: { value: 0, unit: "일" } },
+        { icon: "🎯", title: "최근 30일 달성률", statistics: { value: 0, unit: "%" } },
+        { icon: "⭐", title: "가장 많이 완료한 요일", statistics: { value: "토요일", unit: "" } }
+    ];
+
+    return (
+        <section className="status-section">
+            <div className="status-card-container">
+                {stats.map((statItem, idx) => (
+                    <StatCard key={idx} stats={statItem} />
+                ))}
+            </div>
+        </section>
+    );
+}
+
+export default Status;
