@@ -11,9 +11,6 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
-
-    bottom: 0px;
-    position: absolute;
 }
 
 .footer-top{
